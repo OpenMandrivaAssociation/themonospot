@@ -8,6 +8,8 @@ Source:        http://themonospot.googlecode.com/files/themonospot-%{version}.ta
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:           http://www.integrazioneweb.com/themonospot
 
+BuildArch:     noarch
+
 BuildRequires: glade-sharp2 >= 2.8.3
 BuildRequires: gtk-sharp2 >= 2.8.3
 BuildRequires: mono >= 1.2.3
