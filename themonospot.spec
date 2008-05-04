@@ -1,6 +1,6 @@
 Summary:       An Avi parser and content descriptor
 Name:          themonospot
-Version:       0.6.5
+Version:       0.7.0.1
 Release:       %mkrel 1
 License:       GPLv2
 Group:         Video
