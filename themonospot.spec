@@ -1,14 +1,12 @@
 Summary:       An Avi parser and content descriptor
 Name:          themonospot
 Version:       0.7.0.1
-Release:       %mkrel 1
+Release:       %mkrel 2
 License:       GPLv2
 Group:         Video
 Source:        http://themonospot.googlecode.com/files/themonospot-%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 URL:           http://www.integrazioneweb.com/themonospot
-
-BuildArch:     noarch
 
 BuildRequires: glade-sharp2 >= 2.8.3
 BuildRequires: gtk-sharp2 >= 2.8.3
@@ -47,7 +45,7 @@ and also change some problematic UserData values for table players
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
