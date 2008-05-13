@@ -1,7 +1,7 @@
 Summary:       An Avi parser and content descriptor
 Name:          themonospot
 Version:       0.7.0.1
-Release:       %mkrel 2
+Release:       %mkrel 3
 License:       GPLv2
 Group:         Video
 Source:        http://themonospot.googlecode.com/files/themonospot-%{version}.tar.gz
@@ -51,9 +51,6 @@ and also change some problematic UserData values for table players
 %install
 rm -fr %{buildroot}
 %makeinstall_std
-
-%post
-%__install_info %{name}.info
 
 %clean
 rm -rf %{buildroot}
