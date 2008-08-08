@@ -1,7 +1,7 @@
 Summary:       An Avi parser and content descriptor
 Name:          themonospot
 Version:       0.7.0.1
-Release:       %mkrel 3
+Release:       %mkrel 4
 License:       GPLv2
 Group:         Video
 Source:        http://themonospot.googlecode.com/files/themonospot-%{version}.tar.gz
