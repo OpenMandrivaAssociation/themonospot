@@ -1,25 +1,24 @@
-Summary:       An Avi parser and content descriptor
-Name:          themonospot
-Version:       0.7.1.1
-Release:       %mkrel 1
-License:       GPLv2
-Group:         Video
-Source:        http://themonospot.googlecode.com/files/themonospot-%{version}.tar.gz
-BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL:           http://www.integrazioneweb.com/themonospot
+Summary   : Avi and Mkv parser/editor and content descriptor
+Name      : themonospot
+Version   : 0.7.3.1
+Release   : %mkrel 1
+License   : GPLv2
+Group     : Video
+Source    : http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
+BuildRoot : %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL       : http://www.integrazioneweb.com/themonospot
 
-Buildarch    : noarch
+#BuildArch : noarch
 
-BuildRequires: glade-sharp2 >= 2.8.3
 BuildRequires: gtk-sharp2 >= 2.8.3
+BuildRequires: glade-sharp2 >= 2.8.3
 BuildRequires: mono >= 1.2.3
 BuildRequires: pkgconfig
-BuildRequires: desktop-file-utils
 
-Requires:      glib-sharp2 >= 2.8.3
-Requires:      glade-sharp2 >= 2.8.3
-Requires:      gtk-sharp2 >= 2.8.3
-Requires:      mono >= 1.2.3
+Requires: gtk-sharp2 >= 2.8.3
+Requires: glade-sharp2 >= 2.8.3
+Requires: glib-sharp2 >= 2.8.3
+Requires: mono >= 1.2.3
 
 %description
 themonospot is a simple application that can be used to scan an avi
@@ -42,7 +41,8 @@ file and extract some informations about audio and video data flow:
 Using themonospot it is also possible to modify FourCC informations
 (FourCC code in video chunk and FourCC description in stream header)
 and also change some problematic UserData values for table players 
-(it set the value to DivX999b000p)
+(it set the value to DivX999b000p). This features are available only
+for avi file type.
 
 %prep
 %setup -q
@@ -53,19 +53,21 @@ and also change some problematic UserData values for table players
 
 %install
 rm -fr %{buildroot}
+#%makeinstall_std linuxpkgconfigdir=%{_datadir}/pkgconfig
 %makeinstall_std
-desktop-file-install --vendor="mandriva"               \
-  --dir=%{buildroot}%{_datadir}/applications    \
-  %{name}-gui/resources/%{name}.desktop
+
 
 %clean
 rm -rf %{buildroot}
 
+
 %files
 %defattr(-,root,root,-)
-%doc readme
-%doc copying.gpl
+%doc readme copying.gpl
 %{_bindir}/%{name}
 %{_libdir}/%{name}/
 %{_datadir}/pixmaps/%{name}.png
-%{_datadir}/applications/mandriva-themonospot.desktop
+%{_datadir}/applications/%{name}.desktop
+#%{_datadir}/pkgconfig/%{name}-base.pc
+%{_libdir}/pkgconfig/%{name}-base.pc
+
