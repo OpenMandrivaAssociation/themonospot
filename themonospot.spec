@@ -1,14 +1,13 @@
-Summary   : Avi and Mkv parser/editor and content descriptor
-Name      : themonospot
-Version   : 0.7.3.1
-Release   : %mkrel 1
-License   : GPLv2
-Group     : Video
-Source    : http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
-BuildRoot : %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-URL       : http://www.integrazioneweb.com/themonospot
-
-#BuildArch : noarch
+Summary: Avi and Mkv parser/editor and content descriptor
+Name: themonospot
+Version: 0.7.3.1
+Release: %mkrel 2
+License: GPLv2
+Group: Video
+Source: http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
+Patch0: themonospot-0.7.3.1-fix-default-lang-name.patch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+URL: http://www.integrazioneweb.com/themonospot
 
 BuildRequires: gtk-sharp2 >= 2.8.3
 BuildRequires: glade-sharp2 >= 2.8.3
@@ -46,6 +45,7 @@ for avi file type.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
 %configure2_5x
@@ -53,13 +53,10 @@ for avi file type.
 
 %install
 rm -fr %{buildroot}
-#%makeinstall_std linuxpkgconfigdir=%{_datadir}/pkgconfig
 %makeinstall_std
-
 
 %clean
 rm -rf %{buildroot}
-
 
 %files
 %defattr(-,root,root,-)
@@ -68,6 +65,5 @@ rm -rf %{buildroot}
 %{_libdir}/%{name}/
 %{_datadir}/pixmaps/%{name}.png
 %{_datadir}/applications/%{name}.desktop
-#%{_datadir}/pkgconfig/%{name}-base.pc
 %{_libdir}/pkgconfig/%{name}-base.pc
 
