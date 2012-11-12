@@ -1,0 +1,11 @@
+--- themonospot-base/src/components/clsLanguages.cs~	2009-06-25 20:12:15.000000000 +0200
++++ themonospot-base/src/components/clsLanguages.cs	2009-10-07 05:00:22.000000000 +0200
+@@ -108,7 +108,7 @@
+ 			if (System.IO.File.Exists(ExePath + Path.DirectorySeparatorChar + "languages" + Path.DirectorySeparatorChar + LanguageName + ".lf") == true)
+ 				LanguageSet = LanguageName;
+ 			else
+-				LanguageSet = "English";
++				LanguageSet = "english";
+ 			
+ 			
+ 			try
