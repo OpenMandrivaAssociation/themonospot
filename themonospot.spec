@@ -6,7 +6,8 @@ Version: 0.7.3.1
 Release: 3
 License: GPLv2
 Group:   Video
-Source:  http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
+Source0: http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
+Source1: %{name}.rpmlintrc
 Patch0:  themonospot-0.7.3.1-fix-default-lang-name.patch
 URL: http://www.integrazioneweb.com/themonospot
 
