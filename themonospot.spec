@@ -3,7 +3,7 @@
 Summary: Avi and Mkv parser/editor and content descriptor
 Name:    themonospot
 Version: 0.7.3.1
-Release: 3
+Release: 4
 License: GPLv2
 Group:   Video
 Source0: http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
