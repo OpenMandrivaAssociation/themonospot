@@ -9,7 +9,7 @@ Group:   Video
 Source0: http://www.integrazioneweb.com/repository/SOURCES/themonospot-%{version}.tar.gz
 Source1: %{name}.rpmlintrc
 Patch0:  themonospot-0.7.3.1-fix-default-lang-name.patch
-URL: http://www.integrazioneweb.com/themonospot
+URL: https://www.integrazioneweb.com/themonospot
 
 BuildRequires: gtk-sharp2 >= 2.8.3
 BuildRequires: glade-sharp2 >= 2.8.3
