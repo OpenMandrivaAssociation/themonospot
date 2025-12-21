@@ -11,6 +11,11 @@ Source1: %{name}.rpmlintrc
 Patch0:  themonospot-0.7.3.1-fix-default-lang-name.patch
 URL: https://www.integrazioneweb.com/themonospot
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: gtk-sharp2 >= 2.8.3
 BuildRequires: glade-sharp2 >= 2.8.3
 BuildRequires: mono >= 1.2.3
